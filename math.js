@@ -66,12 +66,23 @@ function areaTriang() {
 
 
 const radio = document.querySelector('.radio') ;
-const diametroq = radio.value * 2  ;
-const diametro =  (radio.value) * 2;
-function circunferencia() {
- const PI = 3.1415;
- const circunferencia = (diametro) * PI;
- const areaCirculo = (radio.value **2) * PI;
 
- console.log(areaCirculo,circunferencia, diametro);
+function circunferencia() {
+ const diametro =  (radio.value) * 2;
+ const PI = Math.PI;
+ const circunferencia = (diametro) * PI;
+ const areaCirculo = Math.pow(radio.value, 2) * PI;
+ if (!radio) {
+  document.getElementById('resA').textContent = `Error, necesitamos que ingreses el valor del radio`;
+ } else {
+  document.getElementById('resC').textContent = `Circunferencia: ${circunferencia.toFixed(0)}`;
+  document.getElementById('resP').textContent = `Diametro: ${diametro.toFixed(1)}`;
+  document.getElementById('resA').textContent = `Area: ${areaCirculo.toFixed(1)}`;
+ }
+
+
 }
+
+
+// Porcentajes
+
