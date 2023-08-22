@@ -66,18 +66,31 @@
   <div class="promedio">
     <h3>Promedio</h3>
     <p> Número tomado como representante de una lista de números. Se utilizan diferentes conceptos de promedio en diferentes contextos. A menudo, "promedio" se refiere a la media aritmética, la suma de los números dividida por cuántos números se promedian</p>
-    <p>Ingrese los numeros separados por un - para poder sacar el promedio</p>
-    <input class="entrada" type="number">
-    <button class="agregar">Agregar</button>
-    <button class="clean-1">Borrar</button>
-    <button class="clean">Limpiar Lista</button>
-    <h4>Lista de numeros: <span id="lista"></span> </h4>
+    <p>Cree una lista de numeros para poder sacar el promedio</p>
+    <input class="entradaP" type="number">
+    <button class="agregarP">Agregar</button>
+    <button class="deleteP">Borrar</button>
+    <button class="cleanP">Limpiar Lista</button>
+    <h4>Lista de numeros: <span id="listaP"></span> </h4>
     <button id="calcPromedio">Calcular Promedio</button>
     <h4>Promedio: <span id="resultP"></span></h4>
+  </div>
+  <div class="mediana">
+    <h3>Mediana</h3>
+    <p>La mediana es un conjunto es un valor que se encuentra a la mitad de los otros valores, es decir, que al ordenar los número de menor a mayor, éste se encuentra justamente en medio entre los que están por arriba.</p>
+    <p>Cree una lista de numeros para poder sacar el promedio</p>
+    <input class="entradaM" type="number">
+    <button class="agregarM">Agregar</button>
+    <button class="deleteM">Borrar</button>
+    <button class="clearM">Limpiar Lista</button>
+    <h4>Lista de numeros: <span id="listaM"></span> </h4>
+    <button id="calcMediana">Calcular Mediana</button>
+    <h4>Mediana: <span id="resultM"></span></h4>
   </div>
  </section>
 </body>
 <script src="./math.js"></script>
 <script src="./porcentajes.js"></script>
 <script src="./estadisticaPromedio.js"></script>
+<script src="./estadisticaMediana.js"></script>
 </html>

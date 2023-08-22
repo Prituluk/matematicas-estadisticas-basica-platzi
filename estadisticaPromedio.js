@@ -1,7 +1,7 @@
-const input = document.querySelector('.entrada');
-const btnI = document.querySelector('.agregar');
-const clean1 = document.querySelector('.clean-1');
-const clean = document.querySelector('.clean')
+const input = document.querySelector('.entradaP');
+const btnI = document.querySelector('.agregarP');
+const clean1 = document.querySelector('.deleteP');
+const clean = document.querySelector('.cleanP')
 const calcPromedio = document.querySelector('#calcPromedio');
 const resultText = document.querySelector('#resultP');
 // const listText = document.querySelector('#lista');
@@ -12,7 +12,7 @@ btnI.addEventListener('click', () => {
  let value = +input.value;
  if (!isNaN(value) && input.value.trim() !== "" && input.value !== "-" && input.value !== ".") {
   lista.push(value);
-  document.getElementById('lista').textContent = lista;
+  document.getElementById('listaP').textContent = lista;
 
 
  } else {
@@ -25,13 +25,10 @@ btnI.addEventListener('click', () => {
 
 calcPromedio.addEventListener('click', () => {
 
- let sumarArrI = 0;
  if (lista.length === 0 ) {
   document.getElementById('resultP').textContent = "";
  } else {
-   for (let i = 0; i < +lista.length; i++) {
-      sumarArrI = +sumarArrI + +lista[i];
-    }
+    const sumarArrI = lista.reduce((a,b) => a + b);
     const promedio = +sumarArrI / +lista.length;
     document.getElementById('resultP').textContent = promedio;
  }
@@ -40,10 +37,11 @@ calcPromedio.addEventListener('click', () => {
 
 clean1.addEventListener('click', () => {
  lista.pop();
- document.getElementById('lista').textContent = lista;
+ document.getElementById('listaP').textContent = lista;
 })
 clean.addEventListener('click', () => {
  lista = [];
- document.getElementById('lista').textContent = lista;
+ document.getElementById('listaP').textContent = lista;
  document.getElementById('resultP').textContent = "";
 })
+
