@@ -4,103 +4,138 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Matemátcas y Estadisticas Basica con Js</title>
+ <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
- <section>
+ <section class="top">
   <nav>
-   <ul>
-    <li><a href="">Matemátcas en JS</a></li>
-    <li><a href="">Porcentajes</a></li>
-    <li><a href="">Estadística Básica</a></li>
-    <li><a href="">Análisis de Salarios</a></li>
+   <ul class="top-ul">
+    <li><a href="#math">Matemátcas en JS</a></li>
+    <li><a href="#porcentaje">Porcentajes</a></li>
+    <li><a href="#Est">Estadística Básica</a></li>
+    <li><a href="#AS">Análisis de Salarios</a></li>
    </ul>
   </nav>
  </section>
- <h1>Taller Práctico de JavaScript: Matemáticas y Estadísticas</h1>
- <p>Proyecto realizado en Platzi donde aprendi a traducir fórmulas matemáticas a JavaScript, conocer el uso de la librería Math, aplicar estadística básica con JavaScript, y realiza un análisis de salarios.</p>
 
- <section class="math">
-  <div class="cuadrado">
-   <img src="" alt="">
-   <input class="lado" type="number">
+ <div class="intro">
+  <h1 class="title-principal">Taller Práctico de JavaScript: Matemáticas y Estadísticas</h1>
+  <p class="parrafo-descripcion">Proyecto realizado en Platzi donde aprendi a traducir fórmulas matemáticas a JavaScript, conocer el uso de la librería Math, aplicar estadística básica con JavaScript, y realiza un análisis de salarios.</p>
+ </div>
+
+
+ <section class="math" id="math">
+  <div class="math-contain__in">
+    <h2 class="title-section">Geometria</h2>
+  <div class="atajos-geometria">
+    <button class="btnC">Cuadrado</button>
+    <button class="btnT">Triangulo</button>
+    <button class="btnCirc">Circulo</button>
+  </div>
+  <div class="cuadrado ">
+    <p class="txt-desc">Calcular Perimetro y Area de un cuadrado </p>
+   <input class="lado datos" type="number" placeholder="valor del lado">
+  </div>
+
+  <div class="triangulo hidden">
+    <p class="txt-desc">Calcular Perimetro y Area de un Triangulo EQUILATERO </p>
+   <input class="ladoA datos" type="number" placeholder="ladoA">
+   <input class="ladoB datos" type="number" placeholder="ladoB">
+   <input class="base datos" type="number" placeholder="Base">
+
+
+  </div>
+  <div class="Circle hidden">
+    <p class="txt-desc">Calcular Diametro, Area y Circunferencia de un circulo ingresando su Perimetro</p>
+   <input class="radio datos" type="number" placeholder="Perimetro">
+  </div>
+  <button class="calc btn-generic">Calcular</button>
+  <div class="resp">
+    <p><span id="resP"></span></p>
+    <p><span id="resA"></span></p>
+    <p><span id="resC"></span></p>
+  </div>
    
-   <input type="checkbox" name="" id="">Calcular Perimetro
-   <input type="checkbox" name="" id="">Calcular Area
   </div>
+  <img class="math-img__circulo hidden" src="./circulo-removebg-preview.png" alt="">
+  <img class="math-img__cuadrado " src="./cuadrado-removebg-preview.png" alt="">
+  <img class="math-img__triangulo hidden" src="./triangulo-removebg-preview.png" alt="">
 
-  <div class="triangulo">
-   <img src="" alt="">
-   <input class="ladoA" type="number" name="" id="">
-   <input class="ladoB" type="number" name="" id="">
-   <input class="base" type="number" name="" id="">
-
-   <input type="checkbox" name="" id="">Calcular Perimetro
-   <input type="checkbox" name="" id="">Calcular Area
-  </div>
-  <div class="Circle">
-   <img src="" alt="">
-   <input class="radio" type="number">
-   
-
-   <input type="checkbox" name="" id="">Calcular Perimetro
-   <input type="checkbox" name="" id="">Calcular Area
-  </div>
-  <button class="calc">Calcular</button>
-  <p><span id="resP"></span></p>
-  <p><span id="resA"></span></p>
-  <p><span id="resC"></span></p>
+ 
  </section>
 
- <section class="porcentajes">
-  <h2>Porcentajes</h2>
-  <div class="product">asd</div>
-  <input class="precio" type="number" placeholder="Precio">
-  <input class="descuento" type="number" placeholder="Descuento %">
-  <button class="calcular">Calcular</button>
-  <p>Total a pagar: <span class="total"></span></p>
+ <section id="porcentaje" class="porcentajes">
+  <div class="porcentaje-img__container">
+    <img class="porcentaje-img" src="./porcentaje.png" alt="">
+  </div>
+  <div class="porcentaje-contain">
+    <h2 class="title-section">Porcentajes</h2>
+    <p class="txt-desc">El porcentaje es un punto símbolo matemático que representa una cantidad dada como una fracción en 100 partes iguales. También se le llama comúnmente tanto por ciento, donde por ciento significa «de cada cien unidades». 
+    </p>
+    <p class="txt-desc">Se usa para definir las relaciones entre dos cantidades, de forma que el tanto por ciento de una cantidad, que es un número, se refiere a la parte proporcional que ese número de unidades representa por cada cien de esa cantidad.
+    </p>
+    <p class="txt-desc">El porcentaje se denota utilizando el símbolo «%»,1​ que matemáticamente equivale al factor 0,01.
+    </p>
+    <br>
+    <p class="txt-desc">
+      Inrese valores en "precio" y "descuento" para obtener un ejemplo de descuento en porcentaje.
+    </p>
+    <input class="precio datos" type="number" placeholder="Precio">
+    <input class="descuento datos" type="number" placeholder="Descuento %">
+    <button class="calcular btn-generic">Calcular</button>
+    <p class="txt-desc">Total a pagar: <span class="total"></span></p>
+  </div>
+  
  </section>
 
- <section class="estadisticaB">
-  <h2>Estadistica Básica</h2>
-
-  <div class="promedio">
-    <h3>Promedio</h3>
-    <p> Número tomado como representante de una lista de números. Se utilizan diferentes conceptos de promedio en diferentes contextos. A menudo, "promedio" se refiere a la media aritmética, la suma de los números dividida por cuántos números se promedian</p>
-    <p>Cree una lista de numeros para poder sacar el promedio</p>
-    <input class="entradaP" type="number">
-    <button class="agregarP">Agregar</button>
-    <button class="deleteP">Borrar</button>
-    <button class="cleanP">Limpiar Lista</button>
-    <h4>Lista de numeros: <span id="listaP"></span> </h4>
-    <button id="calcPromedio">Calcular Promedio</button>
-    <h4>Promedio: <span id="resultP"></span></h4>
+ <section class="estadisticaB" id="Est">
+  <div>
+    <h2 class="title-section">Estadistica Básica</h2>
+  <div class="moda">
+      <h3 class="subT">Moda</h3>
+      <p class="txt-desc">La Moda es el dato que más se repite.</p>
+      <p class="txt-desc">Cree una lista de numeros para poder sacar la moda</p>
+      <input class="entradaModa datos" type="number">
+      <button class="agregarModa btn-generic">Agregar</button>
+      <button class="deleteModa btn-generic">Borrar</button>
+      <button class="clearModa btn-generic">Limpiar Lista</button>
+      <h4 class="txt-desc">Lista de numeros: <span id="listaModa"></span> </h4>
+      <button class="btn-generic2" id="calcModa">Calcular Moda</button>
+      <h4 class="txt-desc">Moda: <span id="resultModa"></span></h4>
   </div>
   <div class="mediana">
-    <h3>Mediana</h3>
-    <p>La mediana es un conjunto es un valor que se encuentra a la mitad de los otros valores, es decir, que al ordenar los número de menor a mayor, éste se encuentra justamente en medio entre los que están por arriba.</p>
-    <p>Cree una lista de numeros para poder sacar el promedio</p>
-    <input class="entradaM" type="number">
-    <button class="agregarM">Agregar</button>
-    <button class="deleteM">Borrar</button>
-    <button class="clearM">Limpiar Lista</button>
-    <h4>Lista de numeros: <span id="listaM"></span> </h4>
-    <button id="calcMediana">Calcular Mediana</button>
-    <h4>Mediana: <span id="resultM"></span></h4>
+    <h3 class="subT">Mediana</h3>
+    <p class="txt-desc">La mediana es un conjunto es un valor que se encuentra a la mitad de los otros valores, es decir, que al ordenar los número de menor a mayor, éste se encuentra justamente en medio entre los que están por arriba.</p>
+    <p class="txt-desc">Cree una lista de numeros para poder sacar el promedio</p>
+    <input class="entradaM datos" type="number">
+    <button class="agregarM btn-generic">Agregar</button>
+    <button class="deleteM btn-generic">Borrar</button>
+    <button class="clearM btn-generic">Limpiar Lista</button>
+    <h4 class="txt-desc">Lista de numeros: <span id="listaM"></span> </h4>
+    <button class="btn-generic2" id="calcMediana">Calcular Mediana</button>
+    <h4 class="txt-desc">Mediana: <span id="resultM"></span></h4>
   </div>
-  <div class="moda">
-    <h3>Moda</h3>
-    <p>La Moda es el dato que más se repite.</p>
-    <p>Cree una lista de numeros para poder sacar la moda</p>
-    <input class="entradaModa" type="number">
-    <button class="agregarModa">Agregar</button>
-    <button class="deleteModa">Borrar</button>
-    <button class="clearModa">Limpiar Lista</button>
-    <h4>Lista de numeros: <span id="listaModa"></span> </h4>
-    <button id="calcModa">Calcular Moda</button>
-    <h4>Moda: <span id="resultModa"></span></h4>
+  <div class="promedio ">
+    <h3 class="subT ">Promedio</h3>
+    <p class="txt-desc"> Número tomado como representante de una lista de números. Se utilizan diferentes conceptos de promedio en diferentes contextos. A menudo, "promedio" se refiere a la media aritmética, la suma de los números dividida por cuántos números se promedian</p>
+    <p class="txt-desc">Cree una lista de numeros para poder sacar el promedio</p>
+    <input class="entradaP datos" type="number">
+    <button class="agregarP btn-generic">Agregar</button>
+    <button class="deleteP btn-generic">Borrar</button>
+    <button class="cleanP btn-generic">Limpiar Lista</button>
+    <h4 class="txt-desc">Lista de numeros: <span id="listaP"></span> </h4>
+    <button class="btn-generic2" id="calcPromedio">Calcular Promedio</button>
+    <h4 class="txt-desc">Promedio: <span id="resultP"></span></h4>
   </div>
+  
+  </div>
+  <img class="img-estadisticas" src="./estadistica.png" alt="">
  </section>
+
+
 </body>
+<script src="salarios.js"></script>
+<script src="./analisisSalarial.js"></script>
 <script src="./math.js"></script>
 <script src="./porcentajes.js"></script>
 <script src="./estadisticaPromedio.js"></script>

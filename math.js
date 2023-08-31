@@ -1,5 +1,57 @@
+const vC = document.querySelector('.Circle');
+const vT = document.querySelector('.triangulo');
+const vCua = document.querySelector('.cuadrado');
+const imgC = document.querySelector('.math-img__circulo');
+const imgCua = document.querySelector('.math-img__cuadrado');
+const imgT = document.querySelector('.math-img__triangulo');
+
 const ladoA = document.querySelector('.lado');
 const btnCalc = document.querySelector('.calc');
+
+const btnC = document.querySelector('.btnC');
+const btnT = document.querySelector('.btnT');
+const btnCirc = document.querySelector('.btnCirc');
+
+btnC.addEventListener('click', () => {
+  if (!vT.classList.contains("hidden") || !vC.classList.contains("hidden")) {
+    vCua.classList.remove('hidden');
+    imgCua.classList.remove('hidden');
+    vC.classList.add('hidden');
+    imgC.classList.add('hidden');
+    vT.classList.add('hidden');
+    imgT.classList.add('hidden');
+    document.getElementById('resP').textContent = "";
+    document.getElementById('resA').textContent ="";
+    document.getElementById('resC').textContent = "";
+  }
+});
+btnT.addEventListener('click', () => {
+  if (!vC.classList.contains("hidden") || !vCua.classList.contains("hidden")) {
+    vCua.classList.add('hidden');
+    imgCua.classList.add('hidden');
+    vC.classList.add('hidden');
+    imgC.classList.add('hidden');
+    vT.classList.remove('hidden');
+    imgT.classList.remove('hidden');
+    document.getElementById('resP').textContent = "";
+    document.getElementById('resA').textContent ="";
+    document.getElementById('resC').textContent = "";
+  }
+});
+btnCirc.addEventListener('click', () => {
+  if (!vT.classList.contains("hidden") || !vCua.classList.contains("hidden")) {
+    vCua.classList.add('hidden');
+    imgCua.classList.add('hidden');
+    vC.classList.remove('hidden');
+    imgC.classList.remove('hidden');
+    vT.classList.add('hidden');
+    imgT.classList.add('hidden');
+    document.getElementById('resP').textContent =  "";
+    document.getElementById('resA').textContent ="";
+    document.getElementById('resC').textContent = "";
+  }
+  // vC.classList.remove('hidden');
+});
 
 function calcPerimetroCuadrado() {
  const cA = ladoA.value;
@@ -15,14 +67,20 @@ function calcAreaCuadrado() {
  const cA = ladoA.value;
  
  let resultado = +cA * +cA;
- document.getElementById('resA').textContent = `Area del cuadrado equilatero = ${resultado}`;
+ document.getElementById('resA').textContent = `Area del cuadrado = ${resultado}`;
 }
 btnCalc.addEventListener('click', () => {
- calcPerimetroCuadrado();
- calcAreaCuadrado();
- preimTriang();
- areaTriang();
- circunferencia() ;
+  if (!(vC.classList.contains("hidden"))) {
+    circunferencia() ;
+  }
+  if (!(vT.classList.contains("hidden"))) {
+    preimTriang();
+    areaTriang();
+  } 
+  if (!(vCua.classList.contains("hidden"))) {
+    calcPerimetroCuadrado();
+    calcAreaCuadrado();
+  }
 });
 
 
@@ -60,7 +118,7 @@ function areaTriang() {
   document.getElementById('resA').textContent = `Error, para calcular el area de un triangulo equilatero los valores de cada lado deben ser iguales`;
  }
  else if (val1 === val2 && val2 === base) {
-  document.getElementById('resA').textContent = `Area del triangulo equilatero = ${area}`;
+  document.getElementById('resA').textContent = `Area del triangulo equilatero = ${area.toFixed(0)}`;
   }
 }
 

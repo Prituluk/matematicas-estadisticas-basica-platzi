@@ -1,10 +1,8 @@
 const precio = document.querySelector('.precio');
 const descuento = document.querySelector('.descuento');
 const btnDescuento = document.querySelector('.calcular');
-const product = document.querySelector('.product');
-product.addEventListener('click', ()=> {
- descuento.value = 10;
-})
+
+
 const descuentos = [];
 
 descuentos.push({
